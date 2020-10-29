@@ -29,3 +29,9 @@
       #+begin_src bash
         $ lein cljfmt fix
       #+end_src
+
+*** Documentation
+    - Generate documentation
+      #+begin_src bash
+        $ lein codox
+      #+end_src
