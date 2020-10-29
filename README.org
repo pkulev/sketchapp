@@ -1,5 +1,7 @@
 #+TITLE: sketchapp
 
+[[https://github.com/pkulev/sketchapp/workflows/CI/badge.svg]]
+
 Clojure client-server collaboration platform.
 
 * Installation
