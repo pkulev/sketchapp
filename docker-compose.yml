@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+  db:
+    image: mongo
+  web:
+    build: .
+    ports:
+      - "10000:10000"
+    volumes:
+      - .:/code
+    links:
+      - db
