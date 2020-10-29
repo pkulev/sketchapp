@@ -5,8 +5,9 @@
   Clojure client-server collaboration platform.
 
 ** Installation
-
-   *TODO*
+   #+begin_src bash
+     $ docker-compose up -d
+   #+end_src
 
 ** Development
 
