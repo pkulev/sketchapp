@@ -1,8 +1,31 @@
-#+TITLE: sketchapp
+* sketchapp
 
-[[https://github.com/pkulev/sketchapp/workflows/CI/badge.svg]]
+  [[https://github.com/pkulev/sketchapp/workflows/CI/badge.svg]]
 
-Clojure client-server collaboration platform.
+  Clojure client-server collaboration platform.
 
-* Installation
+** Installation
 
+   *TODO*
+
+** Development
+
+   We are using [[https://leiningen.org/][leiningen]] for project management.
+
+*** Installation
+    - Install dependencies
+
+      #+begin_src bash
+        $ lein deps
+      #+end_src
+
+*** Testing
+    - Run all tests
+       #+begin_src bash
+         $ lein test
+       #+end_src
+
+    - Autoformat code
+      #+begin_src bash
+        $ lein cljfmt fix
+      #+end_src
