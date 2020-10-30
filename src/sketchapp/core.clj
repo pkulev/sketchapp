@@ -1,7 +1,8 @@
 (ns sketchapp.core
   (:require [monger.core :as mg]
             [monger.collection :as mc]
-            [monger.query :refer :all])
+            [monger.query :refer :all]
+            [sketchapp.web])
   (:use clojure.pprint))
 
 (defn check-db
@@ -20,4 +21,5 @@
    (with-collection (mg/get-db (mg/connect {:host "db"}) "test-db") "keks"
      (find {})
      (fields [:kek_1])
-     (limit 10))))
+     (limit 10)))
+  (sketchapp.web/start-server))
