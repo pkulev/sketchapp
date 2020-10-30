@@ -7,7 +7,5 @@ services:
     build: .
     ports:
       - "10000:10000"
-    volumes:
-      - .:/code
     links:
       - db
