@@ -1,15 +1,14 @@
 (ns sketchapp.core
-  (:require [monger.core :as mg]
-            [monger.collection :as mc]
+  (:require [monger.collection :as mc]
             [monger.query :refer :all]
+            [sketchapp.db :as db]
             [sketchapp.web])
   (:use clojure.pprint))
 
 (defn check-db
   "Write something."
   []
-  (let [conn (mg/connect {:host "db"})
-        db (mg/get-db conn "test-db")]
+  (let [db (db/get)]
     (mc/insert db "keks" {:kek_1 10 :kek_2 20})
     (pprint (mc/find-one-as-map db "keks" {:kek_1 10}))))
 
@@ -18,7 +17,7 @@
   []
   (check-db)
   (pprint
-   (with-collection (mg/get-db (mg/connect {:host "db"}) "test-db") "keks"
+   (with-collection (db/get) "keks"
      (find {})
      (fields [:kek_1])
      (limit 10)))
